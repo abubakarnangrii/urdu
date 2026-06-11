@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ur" dir="rtl">
+<html lang="fr" dir="ltr">
 <head>
   <meta charset="UTF-8" />
-  <title>💌 میرے محبوب کے لیے — نیورل محبت پروٹوکول</title>
+  <title>💌 Pour mon amour — Protocole Neural d'Amour</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Grotesk:wght@300;400;500;600&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -24,16 +24,12 @@
     body {
       min-height: 100vh;
       background: var(--bg);
-      font-family: 'Noto Nastaliq Urdu', 'Space Grotesk', serif;
+      font-family: 'Cormorant Garamond', 'Space Grotesk', serif;
       color: var(--ink);
       overflow-x: hidden;
       cursor: crosshair;
-      direction: rtl;
+      direction: ltr;
     }
-    .glitch-title { font-family: 'Noto Nastaliq Urdu', serif; line-height: 1.7 !important; font-size: clamp(2.2rem,6vw,4.5rem) !important; }
-    .letter-text, .card-label, .card-hint, .letter-sig, .ai-insight,
-    .final-inner h2, .final-inner p, .subtitle-chip, .open-btn,
-    .love-btn, .progress-hud-l, .splash-text { font-family: 'Noto Nastaliq Urdu', serif; line-height: 2.4; }
 
     /* ===== CANVAS ===== */
     #bg-canvas { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
@@ -135,7 +131,7 @@
     }
     @keyframes spin { to{transform:rotate(360deg);} }
     @keyframes pulse-scale { 0%,100%{transform:translate(-50%,-50%) scale(1);} 50%{transform:translate(-50%,-50%) scale(1.2);} }
-    .splash-text { font-size:0.8rem; letter-spacing:0.3em; color:rgba(255,255,255,0.3); text-transform:uppercase; animation:flicker 2s ease-in-out infinite; }
+    .splash-text { font-size:0.8rem; letter-spacing:0.3em; color:rgba(255,255,255,0.3); text-transform:uppercase; animation:flicker 2s ease-in-out infinite; font-family:'Space Grotesk',sans-serif; }
     @keyframes flicker { 0%,100%{opacity:0.3;} 50%{opacity:0.8;} }
     .splash-bar { width:200px; height:2px; background:rgba(255,255,255,0.06); border-radius:99px; overflow:hidden; }
     .splash-bar-fill { height:100%; width:0%; background:linear-gradient(90deg,var(--rose),var(--cyan)); border-radius:99px; transition:width 0.05s linear; }
@@ -153,7 +149,7 @@
       border: 1px solid rgba(255,61,90,0.2); border-radius: 99px;
       background: rgba(255,61,90,0.05); backdrop-filter: blur(10px);
     }
-    .status-item { display: flex; align-items: center; gap: 6px; font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
+    .status-item { display: flex; align-items: center; gap: 6px; font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.4); font-family:'Space Grotesk',sans-serif; }
     .status-dot { width: 6px; height: 6px; border-radius: 50%; }
     .dot-live { background: #22c55e; box-shadow: 0 0 8px #22c55e; animation: blink 1.5s ease-in-out infinite; }
     .dot-rose { background: var(--rose); box-shadow: 0 0 8px var(--rose); animation: blink 2s ease-in-out infinite; }
@@ -163,7 +159,7 @@
     .glitch-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(3rem, 8vw, 6rem);
-      font-weight: 300; line-height: 1.05;
+      font-weight: 300; line-height: 1.15;
       color: var(--ink); position: relative;
       animation: title-glow 4s ease-in-out infinite;
     }
@@ -192,6 +188,7 @@
       font-size: 0.78rem; color: var(--ink-soft); padding: 6px 16px;
       border: 1px solid rgba(255,255,255,0.08); border-radius: 99px;
       background: rgba(255,255,255,0.03); letter-spacing: 0.05em;
+      font-family:'Space Grotesk',sans-serif;
     }
 
     .header-emoji-row {
@@ -221,6 +218,7 @@
       font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase;
       color:var(--rose); white-space:nowrap;
       text-shadow: 0 0 10px var(--rose);
+      font-family:'Space Grotesk',sans-serif;
     }
 
     /* ===== PROGRESS ===== */
@@ -231,8 +229,8 @@
       display: flex; justify-content: space-between; align-items: center;
       margin-bottom: 12px;
     }
-    .progress-hud-l { font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.25); }
-    .progress-hud-r { font-size:1.4rem; font-weight:600; color:var(--rose); text-shadow:0 0 20px var(--rose); font-variant-numeric:tabular-nums; }
+    .progress-hud-l { font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.25); font-family:'Space Grotesk',sans-serif; }
+    .progress-hud-r { font-size:1.4rem; font-weight:600; color:var(--rose); text-shadow:0 0 20px var(--rose); font-variant-numeric:tabular-nums; font-family:'Space Grotesk',sans-serif; }
     .progress-track {
       height: 3px; background: rgba(255,255,255,0.05); border-radius:99px; overflow:hidden;
       position:relative;
@@ -272,13 +270,11 @@
       transition: all 0.5s cubic-bezier(0.34,1.2,0.64,1);
       backdrop-filter: blur(20px);
     }
-    /* Top sheen */
     .letter-card::before {
       content:''; position:absolute; top:0;left:0;right:0;height:1px;
       background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);
       transition: opacity 0.3s;
     }
-    /* Mouse glow */
     .letter-card::after {
       content:''; position:absolute; inset:0; border-radius:20px;
       background:radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(255,61,90,0.08), transparent 55%);
@@ -299,18 +295,16 @@
     }
     .letter-card.open:hover { transform:none; }
 
-    /* Card top bar */
     .card-topbar {
       padding: 16px 20px 0;
       display: flex; align-items: center; justify-content: space-between;
     }
-    .card-num { font-size:0.6rem; letter-spacing:0.25em; color:rgba(255,61,90,0.4); font-weight:500; }
+    .card-num { font-size:0.6rem; letter-spacing:0.25em; color:rgba(255,61,90,0.4); font-weight:500; font-family:'Space Grotesk',sans-serif; }
     .card-indicators { display:flex; gap:6px; align-items:center; }
     .ind { width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.08); transition:all 0.4s; }
     .letter-card.open .ind.i1 { background:var(--rose); box-shadow:0 0 8px var(--rose); }
     .letter-card.open .ind.i2 { background:var(--gold); box-shadow:0 0 8px var(--gold); animation:blink 2s infinite; }
 
-    /* Card body */
     .card-body { padding: 16px 22px 22px; }
     .card-icon-wrap {
       width:56px;height:56px;border-radius:16px;
@@ -332,7 +326,7 @@
       font-family:'Cormorant Garamond',serif;
       font-size:1.2rem;font-weight:600;color:var(--ink);margin-bottom:4px;
     }
-    .card-hint { font-size:0.78rem;color:var(--ink-soft);font-style:italic;margin-bottom:20px;line-height:1.5; }
+    .card-hint { font-size:0.82rem;color:var(--ink-soft);font-style:italic;margin-bottom:20px;line-height:1.6; font-family:'Cormorant Garamond',serif; }
 
     .open-btn {
       display:inline-flex;align-items:center;gap:8px;
@@ -341,6 +335,7 @@
       padding:8px 18px;letter-spacing:0.1em;
       background:rgba(255,61,90,0.04);
       transition:all 0.3s;position:relative;overflow:hidden;
+      font-family:'Space Grotesk',sans-serif;
     }
     .open-btn::before {
       content:''; position:absolute;inset:0;
@@ -351,7 +346,6 @@
     .letter-card:hover .open-btn { border-color:rgba(255,61,90,0.5);color:var(--rose);box-shadow:0 0 15px rgba(255,61,90,0.15); }
     .letter-card.open .open-btn { display:none; }
 
-    /* AI bar */
     .ai-bar { display:none; margin:0 22px 16px; }
     .letter-card.open .ai-bar { display:block; }
     .ai-bar-inner {
@@ -359,7 +353,7 @@
       background:rgba(255,61,90,0.05);border:1px solid rgba(255,61,90,0.12);
       display:flex;align-items:center;gap:12px;
     }
-    .ai-bar-label { font-size:0.62rem;letter-spacing:0.18em;color:rgba(255,61,90,0.5);text-transform:uppercase;white-space:nowrap; }
+    .ai-bar-label { font-size:0.62rem;letter-spacing:0.18em;color:rgba(255,61,90,0.5);text-transform:uppercase;white-space:nowrap;font-family:'Space Grotesk',sans-serif; }
     .ai-wave { display:flex;gap:3px;align-items:center;height:20px;flex:1; }
     .ai-wave-bar {
       width:3px;border-radius:99px;background:var(--rose);
@@ -367,7 +361,6 @@
     }
     @keyframes ai-wave { 0%,100%{height:3px;opacity:0.3;} 50%{height:16px;opacity:0.9;} }
 
-    /* Letter reveal */
     .letter-reveal { display:none;padding:0 22px 24px;animation:unfold 0.7s cubic-bezier(0.34,1.2,0.64,1) forwards; }
     .letter-card.open .letter-reveal { display:block; }
     @keyframes unfold { from{opacity:0;transform:translateY(-16px) scale(0.97);} to{opacity:1;transform:none;} }
@@ -375,7 +368,7 @@
     .divider-line { border:none;border-top:1px solid rgba(255,255,255,0.05);margin:0 0 18px; }
     .letter-text {
       font-family:'Cormorant Garamond',serif;
-      font-size:1.1rem;font-weight:400;line-height:1.95;color:var(--ink);
+      font-size:1.1rem;font-weight:400;line-height:2;color:var(--ink);
     }
     .letter-text em { color:#f0a0b0;font-style:italic; }
     .letter-sig {
@@ -385,15 +378,15 @@
       text-shadow:0 0 15px rgba(240,176,48,0.3);
     }
 
-    /* Insight */
     .ai-insight {
       margin-top:16px;padding:12px 16px;border-radius:12px;
       background:rgba(168,85,247,0.05);border:1px solid rgba(168,85,247,0.15);
-      font-size:0.8rem;color:rgba(168,85,247,0.8);line-height:1.7;
+      font-size:0.82rem;color:rgba(168,85,247,0.8);line-height:1.7;
+      font-family:'Cormorant Garamond',serif;
     }
     .ai-insight-head { display:flex;align-items:center;gap:8px;margin-bottom:6px; }
     .ai-insight-dot { width:5px;height:5px;border-radius:50%;background:var(--purple);box-shadow:0 0 6px var(--purple); }
-    .ai-insight-label { font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(168,85,247,0.5); }
+    .ai-insight-label { font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(168,85,247,0.5);font-family:'Space Grotesk',sans-serif; }
 
     /* ===== FINAL ===== */
     .final-card {
@@ -434,7 +427,7 @@
       margin-bottom:16px;line-height:1.2;
       text-shadow:0 0 40px rgba(255,61,90,0.3);
     }
-    .final-inner p { font-size:0.92rem;color:var(--ink-soft);line-height:1.9;margin-bottom:32px; }
+    .final-inner p { font-size:0.96rem;color:var(--ink-soft);line-height:1.9;margin-bottom:32px;font-family:'Cormorant Garamond',serif; }
 
     .love-btn {
       background:transparent;color:var(--ink);
@@ -483,7 +476,6 @@
     }
     @keyframes ring-spin { to{transform:translate(-50%,-50%) rotate(360deg);} }
 
-    /* Responsive */
     @media(max-width:600px){
       header{padding:80px 16px 32px;}
       .letters-grid{grid-template-columns:1fr;padding:0 16px 60px;}
@@ -495,7 +487,7 @@
   <!-- Splash -->
   <div id="splash">
     <div class="splash-ring"></div>
-    <div class="splash-text">نیورل محبت پروٹوکول شروع ہو رہا ہے</div>
+    <div class="splash-text">Initialisation du Protocole Neural d'Amour…</div>
     <div class="splash-bar"><div class="splash-bar-fill" id="splash-fill"></div></div>
   </div>
 
@@ -526,19 +518,19 @@
   <div class="content">
     <header>
       <div class="status-bar">
-        <div class="status-item"><div class="status-dot dot-live"></div>براہِ راست</div>
-        <div class="status-item"><div class="status-dot dot-rose"></div>محبت کا اشارہ فعال ہے</div>
-        <div class="status-item"><div class="status-dot dot-cyan"></div>نیورل ربط</div>
+        <div class="status-item"><div class="status-dot dot-live"></div>En direct</div>
+        <div class="status-item"><div class="status-dot dot-rose"></div>Signal d'amour actif</div>
+        <div class="status-item"><div class="status-dot dot-cyan"></div>Connexion neurale</div>
       </div>
       <h1 class="glitch-title">
-        تم میری<br />
-        <em data-text="سب سے پیاری احساس">سب سے پیاری احساس</em><br />
-        ہو اس دنیا میں۔
+        Tu es ma<br />
+        <em data-text="plus belle sensation">plus belle sensation</em><br />
+        en ce monde.
       </h1>
       <div class="subtitle-row">
-        <span class="subtitle-chip">✦ &nbsp;۶ خفیہ پیغامات</span>
-        <span class="subtitle-chip">🌌 &nbsp;دل کی گہرائیوں سے بھیجے گئے</span>
-        <span class="subtitle-chip">💫 &nbsp;زمان و مکان سے پرے</span>
+        <span class="subtitle-chip">✦ &nbsp;6 messages secrets</span>
+        <span class="subtitle-chip">🌌 &nbsp;Envoyés des profondeurs du cœur</span>
+        <span class="subtitle-chip">💫 &nbsp;Au-delà du temps et de l'espace</span>
       </div>
       <div class="header-emoji-row">
         <span class="h-emoji">💗</span>
@@ -549,11 +541,11 @@
       </div>
     </header>
 
-    <div class="neon-divider"><span>◈ &nbsp; ہر خط کھولیں &nbsp; ◈</span></div>
+    <div class="neon-divider"><span>◈ &nbsp; Ouvrez chaque lettre &nbsp; ◈</span></div>
 
     <div class="progress-wrap">
       <div class="progress-hud">
-        <span class="progress-hud-l">🔐 ڈی کوڈ کیے گئے پیغامات</span>
+        <span class="progress-hud-l">🔐 Messages décodés</span>
         <span class="progress-hud-r" id="prog-num">0<span style="font-size:0.9rem;color:rgba(255,255,255,0.2)">/6</span></span>
       </div>
       <div class="progress-track">
@@ -574,9 +566,9 @@
           <span class="final-emoji">💫</span>
         </div>
         <div class="waveform" id="waveform"></div>
-        <h2>تمام پیغامات موصول ہو گئے۔ 🛸</h2>
-        <p>ان خطوط میں لکھا ہر ایک لفظ وہ ہے جو میں اپنے پورے وجود سے محسوس کرتا ہوں۔<br/>میں صرف تم سے محبت نہیں کرتا — میں ہر روز، بلا جھجھک، تمہیں چُنتا ہوں۔<br/>تم صرف میرے اپنے نہیں ہو۔ <em style="color:#f0a0b0;font-family:'Noto Nastaliq Urdu',serif;font-style:italic;">تم میرا گھر ہو۔ 🌙</em></p>
-        <button class="love-btn" id="love-btn">💌 &nbsp; مجھے بھی اپنی محبت بھیجو</button>
+        <h2>Tous les messages ont été reçus. 🛸</h2>
+        <p>Chaque mot écrit dans ces lettres est ce que je ressens de tout mon être.<br/>Je ne t'aime pas seulement — chaque jour, sans hésitation, <em style="color:#f0a0b0;font-style:italic;">je te choisis.</em><br/>Tu n'es pas seulement à moi. Tu es ma maison. 🌙</p>
+        <button class="love-btn" id="love-btn">💌 &nbsp; Envoie-moi ton amour aussi</button>
       </div>
     </div>
   </div>
@@ -584,30 +576,30 @@
 <script>
 // ===== DATA =====
 const letters = [
-  { icon:"🌅", label:"وہ لمحہ جب میں نے جانا", hint:"ایک یاد جو ہمیشہ دل کے قریب رہی ✨",
-    text:`ایک لمحہ تھا — خاموش، کوئی خاص بات نہیں ہو رہی تھی — جب میں نے تمہاری طرف دیکھا اور سوچا: <em>یہی وہ ہے</em>۔ آتش بازی کے ساتھ نہیں۔ یقین کے ساتھ۔ جیسے کسی ایسی چیز کو پہچاننا جو میں ہمیشہ سے جانتا تھا مگر جس کے لیے ابھی تک لفظ نہیں ملا تھا۔ وہ لفظ <em>تم</em> ہو۔`,
-    sig:"— تمہارا، اسی لمحے سے 🌅",
-    insight:"محبت میں یقین اکثر خاموشی سے آتا ہے — کوئی ڈرامائی احساس نہیں، بس ایک نرم اور انکار نہ کیا جانے والا جاننا۔" },
-  { icon:"🌙", label:"رات کو جو سوچتا ہوں", hint:"سونے سے پہلے 💫",
-    text:`جب دنیا خاموش ہو جاتی ہے اور کچھ بھی توجہ نہیں بھٹکاتا، تو میرا ذہن ہمیشہ واپس تمہاری طرف آ جاتا ہے۔ تمہاری ہنسی۔ جس طرح تم میرا نام لیتے ہو۔ تمہارے پاس ہونے کی گرماہٹ۔ میں صرف تمہاری موجودگی کی کمی نہیں محسوس کرتا — میں تمہیں اس باب کی طرح یاد کرتا ہوں جسے بار بار پڑھنا پڑتا ہے کیونکہ <em>ہر سطر میری پسندیدہ ہے</em>۔`,
-    sig:"— شب بخیر، ہمیشہ 🌙",
-    insight:"ذہن، جب واقعی سکون میں ہو، صرف وہیں جاتا ہے جس سے سب سے زیادہ محبت ہو۔ میرا ذہن تمہاری طرف جاتا ہے۔" },
-  { icon:"🌿", label:"کیوں عام دن جادوئی ہوتے ہیں", hint:"کیونکہ تم ہو 💚",
-    text:`تم میں یہ نادر صلاحیت ہے: تم معمولی کو خوبصورت بنا دیتے ہو۔ بازار کی سیریں۔ خاموش شامیں۔ کچھ نہ کہنا بھی۔ جب میں تمہارے ساتھ ہوتا ہوں تو <em>معمول غیر معمولی بن جاتا ہے</em> — اس لیے نہیں کہ کوئی خاص بات ہو، بلکہ اس لیے کہ تم وہاں ہو، اور یہی سب کچھ بدل دیتا ہے۔`,
-    sig:"— ہر بورے لمحے سے عشق میں 🌿",
-    insight:"گہری ترین محبت بڑے اشاروں میں نہیں ملتی — وہ معمول میں رہتی ہے، موجودگی سے بدل کر۔" },
-  { icon:"🕯️", label:"وہ باتیں جو تم اپنے اندر نہیں دیکھتے", hint:"مگر میں سب دیکھتا ہوں 💛",
-    text:`تم سوچتے ہو کہ تم بہت زیادہ ہو — اور ساتھ ہی کافی نہیں۔ لیکن جہاں سے میں دیکھتا ہوں، تم <em>بالکل کافی ہو</em>، بالکل درست طریقے سے۔ وہ نرمی جو تم چھپاتے ہو۔ وہ ہمت جسے تم کم سمجھتے ہو۔ وہ مہربانی جو تم اتنی آزادی سے دیتے ہو۔ میں یہ سب دیکھتا ہوں۔ میں ان سب سے حیران ہوں۔`,
-    sig:"— تمہارا سب سے وفادار گواہ 🕯️",
-    insight:"کسی کے ذریعے واقعی دیکھا جانا — یہاں تک کہ وہ حصے بھی جو تم چھپاتے ہو — محبت کے نادر ترین تحفوں میں سے ایک ہے۔" },
-  { icon:"🦋", label:"ایک وعدہ، خاموشی سے کیا گیا", hint:"بڑے اشارے نہیں، بس سچ 🌸",
-    text:`میں وعدہ کرتا ہوں کہ تمہیں کبھی نظرانداز نہیں کروں گا۔ جب آسان ہو اور جب مشکل ہو، تمہیں چُنوں گا۔ وہ ایک شخص بنوں گا جسے تمہیں کبھی خود کو سمجھانا نہ پڑے۔ <em>میں تمہاری طرف ہوں</em> — صرف اس وقت نہیں جب تم سے محبت کرنا آسان ہو، بلکہ ہر الجھے، پیچیدے، خوبصورت لمحے میں بھی۔`,
-    sig:"— مہر بند، میعاد ختم نہیں 🦋",
-    insight:"بغیر الفاظ کا وعدہ پھر بھی وعدہ ہے — ہر چھوٹے انتخاب میں محفوظ جو تمہارے لیے کیا گیا۔" },
-  { icon:"💌", label:"سب سے سچی بات جو کہہ سکتا ہوں", hint:"میرے دل کی گہرائی سے 💗",
-    text:`تم سے محبت کرنا کوئی کام نہیں لگتا۔ یہ لگتا ہے جیسے یہ وہ ہے جو میں <em>ہوں</em>۔ یہ خاموش ہے اور یقینی ہے اور مستقل ہے — جیسے سانس لینا، جیسے کشش ثقل۔ تم صرف میری زندگی میں نہیں آئے۔ تم نے اسے ازسرنو ترتیب دے دیا۔ اور میں اسے کسی اور طریقے سے نہیں چاہوں گا۔ کسی بھی چیز کے لیے نہیں۔ سب کچھ کے لیے بھی نہیں۔`,
-    sig:"— مکمل طور پر اور ہمیشہ کے لیے، تمہارا 💌",
-    insight:"جب محبت تمہاری شناخت کا حصہ بن جائے، تو یہ وہ نہیں رہتی جو تم محسوس کرتے ہو، بلکہ وہ بن جاتی ہے جو تم ہو۔" }
+  { icon:"🌅", label:"Le moment où j'ai su", hint:"Un souvenir qui restera toujours près du cœur ✨",
+    text:`C'était un instant — silencieux, rien de particulier ne se passait — quand je t'ai regardé et pensé : <em>c'est toi</em>. Pas avec des feux d'artifice. Avec une certitude. Comme reconnaître quelque chose que j'avais toujours su, mais pour lequel je n'avais pas encore trouvé les mots. Ce mot, c'est <em>toi</em>.`,
+    sig:"— Tien, depuis cet instant-là 🌅",
+    insight:"En amour, la certitude arrive souvent en silence — aucune révélation dramatique, juste une douce et irrésistible évidence." },
+  { icon:"🌙", label:"Ce que je pense la nuit", hint:"Avant de m'endormir 💫",
+    text:`Quand le monde se tait et que rien ne vient distraire, mon esprit revient toujours vers toi. Ton rire. La façon dont tu prononces mon nom. La chaleur de ta présence. Je ne ressens pas seulement ton absence — je te manque comme un chapitre qu'il faut relire encore et encore, parce que <em>chaque ligne est ma préférée</em>.`,
+    sig:"— Bonne nuit, pour toujours 🌙",
+    insight:"L'esprit, lorsqu'il est vraiment en paix, ne va que là où il aime le plus. Le mien va vers toi." },
+  { icon:"🌿", label:"Pourquoi les jours ordinaires sont magiques", hint:"Parce que tu es là 💚",
+    text:`Tu as ce don rare : tu rends le banal magnifique. Les courses au marché. Les soirées silencieuses. Même le silence. Quand je suis avec toi, <em>l'ordinaire devient extraordinaire</em> — non pas parce qu'il se passe quelque chose de spécial, mais parce que tu es là, et cela change tout.`,
+    sig:"— Amoureux de chaque instant ennuyeux 🌿",
+    insight:"L'amour le plus profond ne se trouve pas dans les grands gestes — il habite l'ordinaire, transformé par la présence." },
+  { icon:"🕯️", label:"Ce que tu ne vois pas en toi", hint:"Mais que je vois entièrement 💛",
+    text:`Tu penses que tu es trop — et en même temps, pas assez. Mais de là où je te regarde, tu es <em>exactement ce qu'il faut</em>, de la plus belle façon. Cette douceur que tu caches. Ce courage que tu sous-estimes. Cette bienveillance que tu offres si généreusement. Je vois tout cela. J'en suis émerveillé.`,
+    sig:"— Ton témoin le plus fidèle 🕯️",
+    insight:"Être vraiment vu par quelqu'un — même dans les parties que l'on cache — est l'un des dons les plus rares que l'amour puisse offrir." },
+  { icon:"🦋", label:"Une promesse faite en silence", hint:"Pas de grands gestes, juste la vérité 🌸",
+    text:`Je promets de ne jamais t'ignorer. De te choisir quand c'est facile et quand c'est difficile. D'être la personne à qui tu n'auras jamais besoin de te justifier. <em>Je suis de ton côté</em> — non seulement quand t'aimer est aisé, mais dans chaque moment embrouillé, complexe et beau.`,
+    sig:"— Scellée, sans date d'expiration 🦋",
+    insight:"Une promesse sans paroles reste une promesse — préservée dans chaque petit choix fait pour toi." },
+  { icon:"💌", label:"La vérité la plus sincère que je puisse dire", hint:"Du plus profond de mon cœur 💗",
+    text:`T'aimer ne ressemble pas à un effort. Cela ressemble à ce que je <em>suis</em>. C'est silencieux, certain et constant — comme respirer, comme la gravité. Tu n'es pas seulement entré dans ma vie. Tu l'as réorganisée entièrement. Et je ne voudrais rien changer. Pour rien au monde. Pour tout l'univers.`,
+    sig:"— Entièrement et pour toujours, tien 💌",
+    insight:"Quand l'amour devient une partie de ton identité, il ne s'agit plus de ce que tu ressens — il devient ce que tu es." }
 ];
 
 // ===== SPLASH =====
@@ -666,8 +658,6 @@ function drawStars(){
     if(s.o>0.95||s.o<0.05)s.do*=-1;
     ctx.beginPath();
     ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
-    ctx.fillStyle=s.color.replace(')',`,${s.o})`).replace('rgb','rgba').replace('#','rgba('+parseInt(s.color.slice(1,3),16)+','+parseInt(s.color.slice(3,5),16)+','+parseInt(s.color.slice(5,7),16)+',').replace('rgba(rgba(','rgba(');
-    // simpler:
     ctx.globalAlpha=s.o;
     ctx.fillStyle=s.color;
     ctx.fill();
@@ -709,7 +699,6 @@ letters.forEach((l,i)=>{
   const card=document.createElement('div');
   card.className='letter-card';
 
-  // Build wave bars for AI bar
   let waveBars='';
   for(let b=0;b<22;b++){
     const delay=(b*0.06).toFixed(2);
@@ -719,18 +708,18 @@ letters.forEach((l,i)=>{
 
   card.innerHTML=`
     <div class="card-topbar">
-      <span class="card-num">TX·${String(i+1).padStart(2,'0')} / ۰۶</span>
+      <span class="card-num">TX·${String(i+1).padStart(2,'0')} / 06</span>
       <div class="card-indicators"><div class="ind i1"></div><div class="ind i2"></div></div>
     </div>
     <div class="card-body">
       <div class="card-icon-wrap">${l.icon}</div>
       <p class="card-label">${l.label}</p>
       <p class="card-hint">${l.hint}</p>
-      <span class="open-btn">⬡ &nbsp;پیغام ڈی کوڈ کریں</span>
+      <span class="open-btn">⬡ &nbsp;Décoder le message</span>
     </div>
     <div class="ai-bar">
       <div class="ai-bar-inner">
-        <span class="ai-bar-label">🤖 اے آئی · ڈی کوڈنگ جاری ہے</span>
+        <span class="ai-bar-label">🤖 IA · Décodage en cours</span>
         <div class="ai-wave">${waveBars}</div>
       </div>
     </div>
@@ -739,7 +728,7 @@ letters.forEach((l,i)=>{
       <p class="letter-text">${l.text}</p>
       <p class="letter-sig">${l.sig}</p>
       <div class="ai-insight">
-        <div class="ai-insight-head"><div class="ai-insight-dot"></div><span class="ai-insight-label">🧠 نیورل بصیرت</span></div>
+        <div class="ai-insight-head"><div class="ai-insight-dot"></div><span class="ai-insight-label">🧠 Aperçu Neural</span></div>
         ${l.insight}
       </div>
     </div>
@@ -797,7 +786,6 @@ function firework(n=120){
 }
 function bigBurst(){
   firework(200);
-  // spawn celebration hearts
   for(let i=0;i<20;i++){
     setTimeout(()=>{
       const h=document.createElement('div');
@@ -811,11 +799,11 @@ function bigBurst(){
 
 document.getElementById('love-btn').addEventListener('click',function(){
   firework(160);
-  this.innerHTML='🥹 &nbsp; میں بھی تم سے محبت کرتا ہوں ♾️';
+  this.innerHTML='🥹 &nbsp; Je t\'aime aussi ♾️';
   this.style.borderColor='rgba(255,61,90,0.9)';
   this.style.boxShadow='0 0 40px rgba(255,61,90,0.4),0 0 80px rgba(168,85,247,0.2)';
   setTimeout(()=>{
-    this.innerHTML='💌 &nbsp; مجھے بھی اپنی محبت بھیجو';
+    this.innerHTML='💌 &nbsp; Envoie-moi ton amour aussi';
     this.style.boxShadow='';
   },5000);
 });
